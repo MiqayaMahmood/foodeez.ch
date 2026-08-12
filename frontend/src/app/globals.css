@@ -1,0 +1,210 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: var(--font-poppins), Arial, Helvetica, sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-inter), Arial, Helvetica, sans-serif;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 2px;
+  }
+}
+
+@layer components {
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .main-heading {
+    @apply text-primary text-2xl md:text-4xl lg:text-6xl font-extrabold mb-6
+  }
+
+  .main-heading-description {
+    @apply text-secondary text-base md:text-lg lg:text-xl font-medium max-w-2xl mx-auto
+  }
+
+  .sub-heading {
+    @apply text-2xl lg:text-4xl text-primary font-bold mb-4
+  }
+  .sub-heading-description {
+    @apply text-text-muted text-base md:text-lg lg:text-xl max-w-2xl mx-auto
+  }
+  
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 
+           border border-transparent rounded-full 
+           text-base md:text-lg font-semibold text-white 
+           bg-primary hover:bg-secondary 
+           transition-all duration-300 
+           focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary;
+  }
+  
+  
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-full
+           text-base font-medium text-white bg-secondary hover:bg-secondary-dark
+           transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-secondary;
+  }
+
+  .btn-primary-outline {
+    @apply inline-flex items-center px-5 py-2 text-sm font-medium text-primary border border-primary rounded-full hover:bg-primary/10 transition-colors
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .section-padding {
+    @apply py-12 sm:py-16 md:py-20;
+  }
+}
+
+/* Google Places Autocomplete Styling */
+.pac-container {
+  border-radius: 0.5rem !important;
+  margin-top: 0.5rem !important;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1) !important;
+  border: 1px solid #e5e7eb !important;
+  font-family: var(--font-inter) !important;
+}
+
+.pac-item {
+  padding: 0.75rem 1rem !important;
+  cursor: pointer !important;
+  transition: background-color 0.2s !important;
+}
+
+.pac-item:hover {
+  background-color: #f3f4f6 !important;
+}
+
+.pac-item-query {
+  font-size: 0.875rem !important;
+  color: #1f2937 !important;
+}
+
+.pac-icon {
+  margin-right: 0.5rem !important;
+}
+
+.pac-matched {
+  font-weight: 500 !important;
+}
+
+
+#no-scrollbar {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+#no-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, and Opera */
+}
+
+:root {
+  --radius: 0.5rem;
+
+  /* 🌐 Backgrounds & Text */
+  --background: #FFFDFB;
+  --foreground: #1F2937;
+
+  --card: #F3F4F6;
+  --card-foreground: #1F2937;
+
+  --popover: #FFFDFB;
+  --popover-foreground: #1F2937;
+
+  /* 🔶 Primary Brand */
+  --primary: #FF4D00;
+  --primary-foreground: #FFFDFB;
+
+  /* 🟠 Secondary Accent */
+  --secondary: #F87C1D;
+  --secondary-foreground: #1F2937;
+
+  /* 🟤 Accent Rich Brown */
+  --accent: #733500;
+  --accent-foreground: #FFFDFB;
+
+  /* 🌟 Highlight */
+  --highlight: #EEA40D;
+
+  /* 🔺 Danger */
+  --destructive: #DC2626;
+  --destructive-foreground: #FFFDFB;
+
+  /* 🔘 Input/Borders/Ring */
+  --border: #E5E7EB;
+  --input: #E5E7EB;
+  --ring: #FF7A33;
+
+  /* 🎨 Charts - Just some creative matches */
+  --chart-1: #FF4D00;
+  --chart-2: #F87C1D;
+  --chart-3: #EEA40D;
+  --chart-4: #22C55E;
+  --chart-5: #DC2626;
+
+  /* 🧾 Sidebar */
+  --sidebar: #FFFDFB;
+  --sidebar-foreground: #1F2937;
+  --sidebar-primary: #FF4D00;
+  --sidebar-primary-foreground: #FFFDFB;
+  --sidebar-accent: #F87C1D;
+  --sidebar-accent-foreground: #1F2937;
+  --sidebar-border: #E5E7EB;
+  --sidebar-ring: #FF7A33;
+}
+
+.dark {
+  --background: #1F2937;
+  --foreground: #FFFDFB;
+
+  --card: #374151;
+  --card-foreground: #FFFDFB;
+
+  --popover: #374151;
+  --popover-foreground: #FFFDFB;
+
+  --primary: #FF7A33;
+  --primary-foreground: #1F2937;
+
+  --secondary: #FDA75D;
+  --secondary-foreground: #1F2937;
+
+  --accent: #9E5C2A;
+  --accent-foreground: #FFFDFB;
+
+  --highlight: #F9C449;
+
+  --destructive: #F87171;
+  --destructive-foreground: #1F2937;
+
+  --border: #4B5563;
+  --input: #4B5563;
+  --ring: #FDA75D;
+
+  --chart-1: #FF7A33;
+  --chart-2: #FDA75D;
+  --chart-3: #F9C449;
+  --chart-4: #22C55E;
+  --chart-5: #F87171;
+
+  --sidebar: #374151;
+  --sidebar-foreground: #FFFDFB;
+  --sidebar-primary: #FF7A33;
+  --sidebar-primary-foreground: #1F2937;
+  --sidebar-accent: #FDA75D;
+  --sidebar-accent-foreground: #1F2937;
+  --sidebar-border: #4B5563;
+  --sidebar-ring: #FDA75D;
+}
